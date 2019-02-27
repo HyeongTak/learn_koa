@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "koa": "^2.7.0"
+  },
+  "name": "learn_koa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/HyeongTak/learn_koa.git",
+  "author": "HyeongTak <andy395023@gmail.com>",
+  "license": "MIT"
+}
