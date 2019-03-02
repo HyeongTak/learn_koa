@@ -1,8 +1,10 @@
 const Router = require('koa-router');
 const route = new Router();
 
-route.get('/', (ctx) => {
-    ctx.body = '경로 설정 확인';
-});
+
+// route/memos/index.js 파일 로드
+const memos = require('./memos');
+
+route.use('/memos', memos.routes());
 
 module.exports = route;
