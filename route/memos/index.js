@@ -1,23 +1,13 @@
 const Router = require('koa-router');
+const memosController = require('./controller/controller');
+
 const memos = new Router();
 
-// CRUD Test Method
-const memoTest = (ctx) => {
-  ctx.body = {
-    method: ctx.method,
-    path: ctx.path,
-    params: ctx.params
-  };
-};
-
-// Routes Setting
-memos.get('/', memoTest);
-memos.get('/:id', memoTest);
-memos.post('/',memoTest);
-
-memos.put('/:id', memoTest);
-memos.patch('/:id', memoTest);
-memos.delete('/:id', memoTest);
-
+memos.get('/', memosController.list);
+memos.get('/:id', memosController.read);
+memos.post('/', memosController.write);
+memos.put('/:id', memosController.update);
+memos.patch('/:id', memosController.modify);
+memos.delete('/:id', memosController.remove);
 
 module.exports = memos;
